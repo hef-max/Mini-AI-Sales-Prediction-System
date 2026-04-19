@@ -1,6 +1,6 @@
 # Mini AI Sales Prediction System
 
-![Mini AI Sales Prediction System](project-root/docs/image_frontend.png) <!
+![Mini AI Sales Prediction System](project-root/docs/image_frontend.png)
 
 A complete machine learning system for predicting product sales status using FastAPI backend, React frontend, and scikit-learn classification model.
 
@@ -285,19 +285,19 @@ Frontend documentation: [frontend_project/README.md](frontend_project/README.md)
 ## Screenshots
 
 ### Login Page
-![Login Page](screenshots/login.png)
+![Login Page](project-root/docs/screenshots/login.jpeg)
 *Login page with authentication form*
 
 ### Dashboard - Sales Data
-![Sales Data Dashboard](screenshots/dashboard-sales.png)
+![Sales Data Dashboard](project-root/docs/screenshots/dashboard-sales.jpeg)
 *Sales data table with summary statistics*
 
 ### Prediction Form
-![Prediction Form](screenshots/prediction-form.png)
+![Prediction Form](project-root/docs/screenshots/prediction-form.jpeg)
 *Interactive prediction form for product sales status*
 
 ### Prediction Result
-![Prediction Result](screenshots/prediction-result.png)
+![Prediction Result](project-root/docs/screenshots/prediction-result.jpeg)
 *Prediction result modal showing outcome and confidence*
 
 ## Documentation
