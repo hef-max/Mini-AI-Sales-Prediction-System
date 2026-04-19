@@ -1,0 +1,259 @@
+/* ===== PREDICTION RESULT MODAL ===== */
+
+.prediction-result-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.prediction-result-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.result-header h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #212529;
+}
+
+.result-header .btn-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6c757d;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+.result-header .btn-close:hover {
+  opacity: 1;
+}
+
+.result-body {
+  padding: 2rem 1.5rem;
+}
+
+/* Prediction Display */
+.prediction-display {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.prediction-display .badge {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+/* Confidence Section */
+.confidence-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.confidence-section label {
+  font-weight: 600;
+  color: #212529;
+}
+
+.confidence-section small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #6c757d;
+}
+
+.progress {
+  height: 25px;
+  background-color: #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: width 0.6s ease;
+}
+
+.progress-bar.bg-success {
+  background-color: #198754 !important;
+}
+
+.progress-bar.bg-warning {
+  background-color: #ffc107 !important;
+  color: #212529;
+}
+
+.progress-bar.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.badge.bg-info {
+  background-color: #0dcaf0 !important;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Input Data Section */
+.input-data-section {
+  margin-bottom: 2rem;
+}
+
+.input-data-section h6 {
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+.input-data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.input-item {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.input-item small {
+  display: block;
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.input-item .value {
+  font-weight: 600;
+  color: #212529;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Interpretation Section */
+.interpretation {
+  padding: 1.5rem;
+  background-color: #e7f3ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 8px;
+  border-left: 4px solid #0d6efd;
+}
+
+.interpretation p {
+  color: #004085;
+  line-height: 1.6;
+}
+
+.text-success {
+  color: #198754 !important;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+}
+
+/* Result Footer */
+.result-footer {
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+.result-footer .btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #dee2e6;
+  background-color: white;
+  color: #6c757d;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.result-footer .btn:hover {
+  border-color: #6c757d;
+  color: #212529;
+  background-color: #f8f9fa;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .prediction-result-overlay {
+    padding: 0;
+  }
+
+  .prediction-result-card {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .result-body {
+    padding: 1.5rem 1rem;
+  }
+
+  .input-data-grid {
+    grid-template-columns: 1fr;
+  }
+}
